@@ -38,11 +38,13 @@ const GlobalContextProvider = ({ children }) => {
   }
 
   useEffect(() => {
+    // react
     // Simulation, as if the data were really called from the API calls (remove this setTimeout later)
     setTimeout(() => {
       getFoodsFromStorage()
       getSeatsFromStorage()
     }, 1000)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return(
